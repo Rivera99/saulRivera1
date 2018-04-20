@@ -69,7 +69,7 @@ public class SaulRivera1 {
                 
                 for( i=0; i<tam;i++){
            
-                    resultado+="\nNombre del producto "+carritoNom[i]+"\n Cantidad" +cantidad[i]+"\n Precio:"+precioUni[i];
+                    resultado+="\nNombre del producto "+carritoNom[i]+"\n Cantidad" +cantidad[i]+"\n Precio:"+precioUni[i]+"\nEl total es:"+acu;
                     
         }
                 JOptionPane.showMessageDialog(null, "Productos"+resultado);
@@ -83,7 +83,6 @@ public class SaulRivera1 {
                 break;
                 
             case 3:
-                
                 break;
         }
             
