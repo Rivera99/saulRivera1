@@ -51,6 +51,7 @@ public class SaulRivera1 {
                 carritoNom = new String[tam];
                 cantidad = new int[tam];
                 precioUni = new double[tam];
+                String resultado="";
                 
                 for(i=0; i<tam; i++){
                     
@@ -62,21 +63,23 @@ public class SaulRivera1 {
                     precioUni[i]=Double.parseDouble(JOptionPane.showInputDialog(null, "Precio unitario del producto"));
                     
                     cont++;
-                    sumaTotal=precioUni[i]*cantidad[i]*1.13;
-                    acu+=sumaTotal;
+                    sumaTotal=precioUni[i]*cantidad[i];
+                    acu+=sumaTotal*1.13;
                 }
+                
+                for( i=0; i<tam;i++){
+           
+                    resultado+="\nNombre del producto "+carritoNom[i]+"\n Cantidad" +cantidad[i]+"\n Precio:"+precioUni[i];
+                    
+        }
+                JOptionPane.showMessageDialog(null, "Productos"+resultado);
                 
                 
                 break;
                 
             case 2:
-                String resultado="";
-                for( i=0; i<tam;i++){
-           
-                    // resultado+="Nombre del producto "+carritoNom[i]+"";
-            
-        }
-                    JOptionPane.showInputDialog(null, "EL total es:"+acu);
+                    
+                    JOptionPane.showMessageDialog(null, "EL total es:"+acu);
                 break;
                 
             case 3:
